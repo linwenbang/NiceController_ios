@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "APService.h"
 
 @interface ViewController ()
 
@@ -16,12 +17,12 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    
+    //注册JPush
+    [APService init];
+    
+    
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
 
 @end
