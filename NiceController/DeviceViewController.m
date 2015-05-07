@@ -8,12 +8,11 @@
 
 #import "DeviceViewController.h"
 #import "ASIHTTPRequest.h"
-#import "ASIFormDataRequest.h"
 #import "MJExtension.h"
-#import <AdSupport/AdSupport.h>
 #import "Device.h"
-
 #import "HttpResultJson.h"
+#import "AdId.h"
+#import "MBProgressHUD+MJ.h"
 
 typedef enum{
     //以下是枚举成员
@@ -87,7 +86,7 @@ typedef enum{
     }
 
     
-    NSString *urlString = [NSString stringWithFormat:@"http://smarthome523000.sinaapp.com/api/v2.0/device/%@",[self getAdId]];
+    NSString *urlString = [NSString stringWithFormat:@"http://smarthome523000.sinaapp.com/api/v2.0/device/%@",[AdId getAdId]];
     NSLog(@"url = %@ ",urlString);
     NSURL *url = [NSURL URLWithString:urlString];
     
@@ -181,7 +180,7 @@ typedef enum{
 
 - (void)requestFailed:(ASIHTTPRequest *)request{
     NSLog(@"Error");
-    
+    [MBProgressHUD showError:@"请求失败"];
 }
 
 /**
@@ -206,14 +205,6 @@ typedef enum{
     self.hum_bar.value = dht11.wet / 100;
     self.temp_bar.value = dht11.temp / 100;
     
-}
-
-- (NSString *)getAdId{
-    
-    NSString *adId = [[[ASIdentifierManager sharedManager] advertisingIdentifier] UUIDString];
-    
-    adId = [adId stringByReplacingOccurrencesOfString:@"-" withString:@""];
-    return adId;
 }
 
 @end

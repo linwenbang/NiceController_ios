@@ -64,7 +64,7 @@
                             <tableViewSection id="NMA-Sg-oBu">
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="m3P-QY-Sm2" imageView="3ui-P1-2KQ" rowHeight="40" style="IBUITableViewCellStyleDefault" id="HnQ-7L-epU">
-                                        <rect key="frame" x="0.0" y="35" width="320" height="40"/>
+                                        <rect key="frame" x="0.0" y="99" width="320" height="40"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="HnQ-7L-epU" id="Qz2-Z9-qQ8">
                                             <rect key="frame" x="0.0" y="0.0" width="287" height="39"/>
@@ -90,7 +90,7 @@
                             <tableViewSection id="t6x-6C-enU">
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="aHs-0W-oFE" imageView="Aka-DC-kgN" rowHeight="40" style="IBUITableViewCellStyleDefault" id="p8S-yX-m4Q">
-                                        <rect key="frame" x="0.0" y="95" width="320" height="40"/>
+                                        <rect key="frame" x="0.0" y="159" width="320" height="40"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="p8S-yX-m4Q" id="SVR-Ic-4dv">
                                             <rect key="frame" x="0.0" y="0.0" width="287" height="39"/>
@@ -129,26 +129,18 @@
         <!--新用户注册-->
         <scene sceneID="FF0-F8-rPT">
             <objects>
-                <viewController id="pPe-jQ-PtC" sceneMemberID="viewController">
+                <viewController id="pPe-jQ-PtC" customClass="NewUserRegisterViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="C6a-RP-DtF">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="用户昵称" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="66x-Ss-iEn">
-                                <rect key="frame" x="23" y="200" width="68" height="21"/>
+                                <rect key="frame" x="23" y="103" width="68" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="fdb-Sx-5Ka">
-                                <rect key="frame" x="181" y="264" width="109" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="申请注册">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="提示：申请注册后，由系统管理员批准后即可注册成功" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" enabled="NO" adjustsFontSizeToFit="NO" id="Tes-bB-n5A">
                                 <rect key="frame" x="30" y="421" width="260" height="103"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -157,16 +149,30 @@
                                 <color key="highlightedColor" red="0.78065814393939392" green="0.78065814393939392" blue="0.78065814393939392" alpha="1" colorSpace="calibratedRGB"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="WCG-OV-ZJT">
-                                <rect key="frame" x="99" y="196" width="205" height="30"/>
+                                <rect key="frame" x="99" y="99" width="205" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="fdb-Sx-5Ka">
+                                <rect key="frame" x="195" y="158" width="109" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="申请注册">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="submit:" destination="pPe-jQ-PtC" eventType="touchUpInside" id="pnk-9G-JyY"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="新用户注册" id="wK2-S6-DcI"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="aliasTextField" destination="WCG-OV-ZJT" id="WPK-Tn-0Ku"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="828-Vm-B9V" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -263,20 +269,20 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="管理员密码" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="GoC-ap-G7V">
-                                <rect key="frame" x="25" y="139" width="85" height="21"/>
+                                <rect key="frame" x="25" y="106" width="85" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="lvB-79-v6a">
-                                <rect key="frame" x="118" y="135" width="186" height="30"/>
+                                <rect key="frame" x="118" y="102" width="186" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation" secureTextEntry="YES"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="S3d-Vk-0cV">
-                                <rect key="frame" x="244" y="184" width="60" height="27"/>
+                                <rect key="frame" x="244" y="148" width="60" height="27"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="登录">
