@@ -14,6 +14,13 @@
 		E275F1B31AFB0E960041D53A /* MBProgressHUD+MJ.m in Sources */ = {isa = PBXBuildFile; fileRef = E275F1B11AFB0E960041D53A /* MBProgressHUD+MJ.m */; };
 		E275F1B41AFB0E960041D53A /* MBProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = E275F1B21AFB0E960041D53A /* MBProgressHUD.bundle */; };
 		E275F1B81AFB13580041D53A /* UIViewController+KeyboardAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = E275F1B71AFB13580041D53A /* UIViewController+KeyboardAnimation.m */; };
+		E28D40C51AFB3E310028EAAE /* UrlModiifyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E28D40C41AFB3E310028EAAE /* UrlModiifyViewController.m */; };
+		E28D40CA1AFBA4050028EAAE /* ModifyAdminPwdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E28D40C91AFBA4050028EAAE /* ModifyAdminPwdViewController.m */; };
+		E28D40CE1AFBB7090028EAAE /* UrlConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = E28D40CD1AFBB7080028EAAE /* UrlConstants.m */; };
+		E28D40D31AFBBD390028EAAE /* LoginAdminViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E28D40D21AFBBD390028EAAE /* LoginAdminViewController.m */; };
+		E28D40D61AFBC5E60028EAAE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E28D40D41AFBC5E60028EAAE /* Main.storyboard */; };
+		E28D40DB1AFBD3FB0028EAAE /* SettingTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E28D40DA1AFBD3FB0028EAAE /* SettingTableViewController.m */; };
+		E28D40DF1AFBD7690028EAAE /* ManagerTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E28D40DE1AFBD7690028EAAE /* ManagerTableViewController.m */; };
 		E29DD3E01AF9C4BD005D0D33 /* MainTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E29DD3DF1AF9C4BD005D0D33 /* MainTabBarViewController.m */; };
 		E29DD3E71AFA0A63005D0D33 /* DeviceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E29DD3E61AFA0A63005D0D33 /* DeviceViewController.m */; };
 		E29DD40C1AFA2CE4005D0D33 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E29DD40B1AFA2CE4005D0D33 /* MobileCoreServices.framework */; };
@@ -32,7 +39,6 @@
 		E29DD4341AFA5346005D0D33 /* HttpResultJson.m in Sources */ = {isa = PBXBuildFile; fileRef = E29DD4331AFA5346005D0D33 /* HttpResultJson.m */; };
 		E2C47F4B1AF72172003FE37C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E2C47F4A1AF72172003FE37C /* main.m */; };
 		E2C47F4E1AF72172003FE37C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E2C47F4D1AF72172003FE37C /* AppDelegate.m */; };
-		E2C47F541AF72172003FE37C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2C47F521AF72172003FE37C /* Main.storyboard */; };
 		E2C47F561AF72172003FE37C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E2C47F551AF72172003FE37C /* Images.xcassets */; };
 		E2C47F591AF72172003FE37C /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = E2C47F571AF72172003FE37C /* LaunchScreen.xib */; };
 		E2C47F651AF72173003FE37C /* NiceControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E2C47F641AF72173003FE37C /* NiceControllerTests.m */; };
@@ -74,6 +80,19 @@
 		E275F1B21AFB0E960041D53A /* MBProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = MBProgressHUD.bundle; sourceTree = "<group>"; };
 		E275F1B61AFB13580041D53A /* UIViewController+KeyboardAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+KeyboardAnimation.h"; sourceTree = "<group>"; };
 		E275F1B71AFB13580041D53A /* UIViewController+KeyboardAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+KeyboardAnimation.m"; sourceTree = "<group>"; };
+		E28D40C31AFB3E310028EAAE /* UrlModiifyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UrlModiifyViewController.h; sourceTree = "<group>"; };
+		E28D40C41AFB3E310028EAAE /* UrlModiifyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UrlModiifyViewController.m; sourceTree = "<group>"; };
+		E28D40C81AFBA4050028EAAE /* ModifyAdminPwdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModifyAdminPwdViewController.h; sourceTree = "<group>"; };
+		E28D40C91AFBA4050028EAAE /* ModifyAdminPwdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModifyAdminPwdViewController.m; sourceTree = "<group>"; };
+		E28D40CC1AFBB7060028EAAE /* UrlConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UrlConstants.h; sourceTree = "<group>"; };
+		E28D40CD1AFBB7080028EAAE /* UrlConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UrlConstants.m; sourceTree = "<group>"; };
+		E28D40D11AFBBD380028EAAE /* LoginAdminViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginAdminViewController.h; sourceTree = "<group>"; };
+		E28D40D21AFBBD390028EAAE /* LoginAdminViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginAdminViewController.m; sourceTree = "<group>"; };
+		E28D40D51AFBC5E60028EAAE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		E28D40D91AFBD3FB0028EAAE /* SettingTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingTableViewController.h; sourceTree = "<group>"; };
+		E28D40DA1AFBD3FB0028EAAE /* SettingTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingTableViewController.m; sourceTree = "<group>"; };
+		E28D40DD1AFBD7690028EAAE /* ManagerTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ManagerTableViewController.h; sourceTree = "<group>"; };
+		E28D40DE1AFBD7690028EAAE /* ManagerTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ManagerTableViewController.m; sourceTree = "<group>"; };
 		E29DD3DE1AF9C4BD005D0D33 /* MainTabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainTabBarViewController.h; sourceTree = "<group>"; };
 		E29DD3DF1AF9C4BD005D0D33 /* MainTabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainTabBarViewController.m; sourceTree = "<group>"; };
 		E29DD3E51AFA0A63005D0D33 /* DeviceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeviceViewController.h; sourceTree = "<group>"; };
@@ -109,7 +128,6 @@
 		E2C47F4A1AF72172003FE37C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E2C47F4C1AF72172003FE37C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		E2C47F4D1AF72172003FE37C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		E2C47F531AF72172003FE37C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E2C47F551AF72172003FE37C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		E2C47F581AF72172003FE37C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		E2C47F5E1AF72173003FE37C /* NiceControllerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NiceControllerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -197,6 +215,8 @@
 				E29DD4331AFA5346005D0D33 /* HttpResultJson.m */,
 				E275F1AA1AFB07EB0041D53A /* AdId.h */,
 				E275F1AB1AFB07EB0041D53A /* AdId.m */,
+				E28D40CC1AFBB7060028EAAE /* UrlConstants.h */,
+				E28D40CD1AFBB7080028EAAE /* UrlConstants.m */,
 			);
 			name = HttpTool;
 			sourceTree = "<group>";
@@ -246,6 +266,76 @@
 			name = Tool;
 			sourceTree = "<group>";
 		};
+		E28D40C21AFB3E090028EAAE /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				E28D40C61AFBA3B90028EAAE /* Controller */,
+			);
+			name = Manager;
+			sourceTree = "<group>";
+		};
+		E28D40C61AFBA3B90028EAAE /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E28D40C31AFB3E310028EAAE /* UrlModiifyViewController.h */,
+				E28D40C41AFB3E310028EAAE /* UrlModiifyViewController.m */,
+				E28D40DD1AFBD7690028EAAE /* ManagerTableViewController.h */,
+				E28D40DE1AFBD7690028EAAE /* ManagerTableViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		E28D40C71AFBA3C50028EAAE /* ModifyAdminPwd */ = {
+			isa = PBXGroup;
+			children = (
+				E28D40CB1AFBA4080028EAAE /* Controller */,
+			);
+			name = ModifyAdminPwd;
+			sourceTree = "<group>";
+		};
+		E28D40CB1AFBA4080028EAAE /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E28D40C81AFBA4050028EAAE /* ModifyAdminPwdViewController.h */,
+				E28D40C91AFBA4050028EAAE /* ModifyAdminPwdViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		E28D40CF1AFBBCAE0028EAAE /* LoginAdmin */ = {
+			isa = PBXGroup;
+			children = (
+				E28D40D01AFBBCDF0028EAAE /* Conroller */,
+			);
+			name = LoginAdmin;
+			sourceTree = "<group>";
+		};
+		E28D40D01AFBBCDF0028EAAE /* Conroller */ = {
+			isa = PBXGroup;
+			children = (
+				E28D40D11AFBBD380028EAAE /* LoginAdminViewController.h */,
+				E28D40D21AFBBD390028EAAE /* LoginAdminViewController.m */,
+			);
+			name = Conroller;
+			sourceTree = "<group>";
+		};
+		E28D40D71AFBD3BC0028EAAE /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+				E28D40D81AFBD3C60028EAAE /* Controller */,
+			);
+			name = Setting;
+			sourceTree = "<group>";
+		};
+		E28D40D81AFBD3C60028EAAE /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E28D40D91AFBD3FB0028EAAE /* SettingTableViewController.h */,
+				E28D40DA1AFBD3FB0028EAAE /* SettingTableViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
 		E29DD3D81AF9BE16005D0D33 /* Main */ = {
 			isa = PBXGroup;
 			children = (
@@ -282,6 +372,10 @@
 		E29DD3DC1AF9C479005D0D33 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				E28D40D71AFBD3BC0028EAAE /* Setting */,
+				E28D40CF1AFBBCAE0028EAAE /* LoginAdmin */,
+				E28D40C71AFBA3C50028EAAE /* ModifyAdminPwd */,
+				E28D40C21AFB3E090028EAAE /* Manager */,
 				E275F1A31AFB05D00041D53A /* UserRegister */,
 				E29DD3E11AFA0A24005D0D33 /* Devices */,
 				E29DD3D81AF9BE16005D0D33 /* Main */,
@@ -395,8 +489,8 @@
 		E2C47F481AF72172003FE37C /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				E2C47F521AF72172003FE37C /* Main.storyboard */,
 				E2C47F551AF72172003FE37C /* Images.xcassets */,
+				E28D40D41AFBC5E60028EAAE /* Main.storyboard */,
 				E2C47F571AF72172003FE37C /* LaunchScreen.xib */,
 				E2C47F491AF72172003FE37C /* Info.plist */,
 				E2C47F4A1AF72172003FE37C /* main.m */,
@@ -534,7 +628,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E2C47FB81AF73BD1003FE37C /* PushConfig.plist in Resources */,
-				E2C47F541AF72172003FE37C /* Main.storyboard in Resources */,
+				E28D40D61AFBC5E60028EAAE /* Main.storyboard in Resources */,
 				E275F1B41AFB0E960041D53A /* MBProgressHUD.bundle in Resources */,
 				E2C47F591AF72172003FE37C /* LaunchScreen.xib in Resources */,
 				E2C47F561AF72172003FE37C /* Images.xcassets in Resources */,
@@ -597,16 +691,22 @@
 				E275F1A11AFB050B0041D53A /* MBProgressHUD.m in Sources */,
 				E29DD3E71AFA0A63005D0D33 /* DeviceViewController.m in Sources */,
 				E2C47F4E1AF72172003FE37C /* AppDelegate.m in Sources */,
+				E28D40DB1AFBD3FB0028EAAE /* SettingTableViewController.m in Sources */,
 				E275F1A91AFB06250041D53A /* NewUserRegisterViewController.m in Sources */,
 				E29DD4291AFA4592005D0D33 /* NSObject+MJKeyValue.m in Sources */,
 				E29DD4301AFA4D82005D0D33 /* Dht11.m in Sources */,
+				E28D40CE1AFBB7090028EAAE /* UrlConstants.m in Sources */,
 				E29DD42A1AFA4592005D0D33 /* NSString+MJExtension.m in Sources */,
+				E28D40C51AFB3E310028EAAE /* UrlModiifyViewController.m in Sources */,
+				E28D40CA1AFBA4050028EAAE /* ModifyAdminPwdViewController.m in Sources */,
+				E28D40DF1AFBD7690028EAAE /* ManagerTableViewController.m in Sources */,
 				E275F1B81AFB13580041D53A /* UIViewController+KeyboardAnimation.m in Sources */,
 				E29DD4241AFA4592005D0D33 /* MJType.m in Sources */,
 				E29DD4271AFA4592005D0D33 /* NSObject+MJProperty.m in Sources */,
 				E29DD4261AFA4592005D0D33 /* MJProperty.m in Sources */,
 				E2C47F4B1AF72172003FE37C /* main.m in Sources */,
 				E29DD3E01AF9C4BD005D0D33 /* MainTabBarViewController.m in Sources */,
+				E28D40D31AFBBD390028EAAE /* LoginAdminViewController.m in Sources */,
 				E29DD4251AFA4592005D0D33 /* MJFoundation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -630,10 +730,10 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		E2C47F521AF72172003FE37C /* Main.storyboard */ = {
+		E28D40D41AFBC5E60028EAAE /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				E2C47F531AF72172003FE37C /* Base */,
+				E28D40D51AFBC5E60028EAAE /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -742,7 +842,7 @@
 					"${SDK_DIR}/usr/include/libxml2",
 				);
 				INFOPLIST_FILE = NiceController/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -768,7 +868,7 @@
 					"${SDK_DIR}/usr/include/libxml2",
 				);
 				INFOPLIST_FILE = NiceController/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",

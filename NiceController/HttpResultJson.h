@@ -9,9 +9,9 @@
 #import <Foundation/Foundation.h>
 
 @interface HttpResultJson : NSObject
+
 @property (nonatomic,assign) int code;
 @property (nonatomic,copy) NSString *dto;
 @property (nonatomic,copy) NSString *summary;
-
 
 @end

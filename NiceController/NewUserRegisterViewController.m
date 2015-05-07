@@ -12,8 +12,9 @@
 #import "HttpResultJson.h"
 #import "MJExtension.h"
 #import "MBProgressHUD+MJ.h"
+#import "UrlConstants.h"
 
-@interface NewUserRegisterViewController ()
+@interface NewUserRegisterViewController ()<ASIHTTPRequestDelegate>
 @property (weak, nonatomic) IBOutlet UITextField *aliasTextField;
 - (IBAction)submit:(UIButton *)sender;
 
@@ -76,8 +77,8 @@
     }
     
     
-    NSString *urlString = [NSString stringWithFormat:@"http://smarthome523000.sinaapp.com/api/v2.0/regist/%@",[AdId getAdId]];
-    NSLog(@"url = %@ ",urlString);
+    NSString *urlString = [UrlConstants getUserRegisterUrl];
+    NSLog(@"url = %@",urlString);
     NSURL *url = [NSURL URLWithString:urlString];
     
     
@@ -85,13 +86,35 @@
     
     //设置post body
     NSString *body = [NSString stringWithFormat:@"userid=%@&Alias=%@",[AdId getAdId],self.aliasTextField.text];
-    NSLog(@"body = %@ ",body);
+    NSLog(@"body = %@",body);
     [request appendPostData:[body dataUsingEncoding:NSUTF8StringEncoding]];
     [request setRequestMethod:@"POST"];
     
     [request setDelegate:self];
     [request startAsynchronous];
     
-    
 }
+
+- (void)requestFinished:(ASIHTTPRequest *)request{
+    
+    NSString *responseString = [request responseString];
+    NSLog(@"responseString = %@",responseString);
+    
+    HttpResultJson *json = [HttpResultJson objectWithKeyValues:responseString];
+    switch (json.code) {
+        case 200:
+            [MBProgressHUD showSuccess:@"注册成功"];
+            break;
+            
+        default:
+            [MBProgressHUD showError:json.summary];
+            break;
+    }
+}
+
+
+-  (void)requestFailed:(ASIHTTPRequest *)request{
+    [MBProgressHUD showError:@"请求失败"];
+}
+
 @end

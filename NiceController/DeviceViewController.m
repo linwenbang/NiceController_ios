@@ -13,6 +13,7 @@
 #import "HttpResultJson.h"
 #import "AdId.h"
 #import "MBProgressHUD+MJ.h"
+#import "UrlConstants.h"
 
 typedef enum{
     //以下是枚举成员
@@ -59,7 +60,7 @@ typedef enum{
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    NSLog(@"DeviceViewController");
+    [self changeDeviceStatusWithDviceName:@"all" andAction:@"status" andView:nil];
 }
 
 
@@ -86,7 +87,9 @@ typedef enum{
     }
 
     
-    NSString *urlString = [NSString stringWithFormat:@"http://smarthome523000.sinaapp.com/api/v2.0/device/%@",[AdId getAdId]];
+    NSString *urlString = [UrlConstants getDeviceUrl];
+    
+//    NSString *urlString = [NSString stringWithFormat:@"http://smarthome523000.sinaapp.com/api/v2.0/device/00664b1185a4"];
     NSLog(@"url = %@ ",urlString);
     NSURL *url = [NSURL URLWithString:urlString];
     
@@ -147,31 +150,29 @@ typedef enum{
 - (void)requestFinished:(ASIHTTPRequest *)request{
     // 当以文本形式读取返回内容时用这个方法
     NSString *responseString = [request responseString];
-    
     NSLog(@"responseString = %@",responseString);
     // 当以二进制形式读取返回内容时用这个方法
     //    NSData *responseData = [request responseData];
     
-    switch (self.enum_device) {
-        case ALL:
-            //设置led等状态
-            [self setDeviceWithJson:responseString];
+    HttpResultJson *json = [HttpResultJson objectWithKeyValues:responseString];
+    switch (json.code) {
+        case 200:
+            
+            switch (self.enum_device) {
+                case ALL:
+                    //设置led等状态
+                    [self setDeviceWithJson:json];
+                    [MBProgressHUD showSuccess:@"更新成功"];
+                    break;
+                default:
+                    self.viewClick.selected = !self.viewClick.isSelected;
+                    break;
+            }
+
             break;
-            //        case LED:
-            //
-            //            break;
-            //        case FAN:
-            //
-            //            break;
-            //        case BEEP:
-            //
-            //            break;
-            //        case LOCK:
-            //
-            //            break;
             
         default:
-            self.viewClick.selected = !self.viewClick.isSelected;
+            [MBProgressHUD showError:json.summary];
             break;
     }
     
@@ -179,17 +180,16 @@ typedef enum{
 }
 
 - (void)requestFailed:(ASIHTTPRequest *)request{
-    NSLog(@"Error");
+    NSLog(@"请求失败");
     [MBProgressHUD showError:@"请求失败"];
 }
 
 /**
  *  设置所有设备状态
  */
-- (void)setDeviceWithJson:(NSString *)responseString{
+- (void)setDeviceWithJson:(HttpResultJson *)json{
     
     //处理json
-    HttpResultJson *json = [HttpResultJson objectWithKeyValues:responseString];
     Device *device = [Device objectWithKeyValues:json.dto];
     NSLog(@"pic = %@ led = %d",device.picture,device.led);
     

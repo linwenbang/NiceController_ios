@@ -15,6 +15,8 @@
     NSString *adId = [[[ASIdentifierManager sharedManager] advertisingIdentifier] UUIDString];
     
     adId = [adId stringByReplacingOccurrencesOfString:@"-" withString:@""];
+    adId = [adId substringFromIndex:10];
+    
     return adId;
 }
 

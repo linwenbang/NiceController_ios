@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="vkp-Q3-AIk">
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
     </dependencies>
     <scenes>
@@ -55,7 +56,7 @@
         <!--设置-->
         <scene sceneID="RG2-Pe-C1b">
             <objects>
-                <tableViewController id="DAw-dS-XIm" sceneMemberID="viewController">
+                <tableViewController id="DAw-dS-XIm" customClass="SettingTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="pTi-Lz-3Ux">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -81,9 +82,6 @@
                                                 </imageView>
                                             </subviews>
                                         </tableViewCellContentView>
-                                        <connections>
-                                            <segue destination="cg0-i2-xiY" kind="push" id="XjT-oe-I4G"/>
-                                        </connections>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
@@ -119,12 +117,18 @@
                             <outlet property="delegate" destination="DAw-dS-XIm" id="lSv-r7-Gah"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="设置" id="yFc-5K-1Cq"/>
+                    <navigationItem key="navigationItem" title="设置" id="yFc-5K-1Cq">
+                        <barButtonItem key="backBarButtonItem" title="返回" id="chH-u5-5UB"/>
+                    </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <segue destination="QEx-hQ-olk" kind="push" identifier="setting2admin" id="167-0p-KMH"/>
+                        <segue destination="cg0-i2-xiY" kind="push" identifier="setting2login" id="7Rw-Yj-z3E"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tCW-hu-SH6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="508" y="184"/>
+            <point key="canvasLocation" x="602" y="80"/>
         </scene>
         <!--新用户注册-->
         <scene sceneID="FF0-F8-rPT">
@@ -168,7 +172,9 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="新用户注册" id="wK2-S6-DcI"/>
+                    <navigationItem key="navigationItem" title="新用户注册" id="wK2-S6-DcI">
+                        <barButtonItem key="backBarButtonItem" title="返回" id="ze4-9A-n99"/>
+                    </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                     <connections>
                         <outlet property="aliasTextField" destination="WCG-OV-ZJT" id="WPK-Tn-0Ku"/>
@@ -176,12 +182,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="828-Vm-B9V" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="978" y="408"/>
+            <point key="canvasLocation" x="1080" y="390"/>
         </scene>
         <!--管理-->
         <scene sceneID="w4c-1b-RSy">
             <objects>
-                <tableViewController id="QEx-hQ-olk" sceneMemberID="viewController">
+                <tableViewController id="QEx-hQ-olk" customClass="ManagerTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="kRH-sc-I26">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -189,11 +195,11 @@
                         <sections>
                             <tableViewSection id="gk5-zE-J7a">
                                 <cells>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="4tf-8z-HQZ" style="IBUITableViewCellStyleDefault" id="Smq-dT-cPr">
-                                        <rect key="frame" x="0.0" y="35" width="320" height="44"/>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="4tf-8z-HQZ" style="IBUITableViewCellStyleDefault" id="Smq-dT-cPr">
+                                        <rect key="frame" x="0.0" y="99" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Smq-dT-cPr" id="uQf-Xl-v7a">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="服务器URL修改" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="4tf-8z-HQZ">
@@ -204,16 +210,19 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="ERP-en-e4w" kind="push" id="v01-8j-fN2"/>
+                                        </connections>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
                             <tableViewSection id="8Xn-v0-sI2">
                                 <cells>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="aaJ-qI-awr" style="IBUITableViewCellStyleDefault" id="ZiR-rH-FtW">
-                                        <rect key="frame" x="0.0" y="99" width="320" height="44"/>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="aaJ-qI-awr" style="IBUITableViewCellStyleDefault" id="ZiR-rH-FtW">
+                                        <rect key="frame" x="0.0" y="163" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ZiR-rH-FtW" id="qIP-N1-TAP">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="修改管理员密码" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="aaJ-qI-awr">
@@ -224,16 +233,19 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="Mh3-wn-HpM" kind="push" id="hSJ-t4-mgJ"/>
+                                        </connections>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
                             <tableViewSection id="Wuo-he-tbK">
                                 <cells>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="8SI-uY-cwa" style="IBUITableViewCellStyleDefault" id="14d-8v-BCE">
-                                        <rect key="frame" x="0.0" y="163" width="320" height="44"/>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="8SI-uY-cwa" style="IBUITableViewCellStyleDefault" id="14d-8v-BCE">
+                                        <rect key="frame" x="0.0" y="227" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="14d-8v-BCE" id="5hT-cm-ibj">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="查看已注册用户" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="8SI-uY-cwa">
@@ -244,6 +256,9 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="pFz-k5-ZP5" kind="push" id="Ifx-Ew-Bjf"/>
+                                        </connections>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
@@ -253,17 +268,125 @@
                             <outlet property="delegate" destination="QEx-hQ-olk" id="aT5-1G-QXw"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="管理" id="1bw-En-nNX"/>
+                    <navigationItem key="navigationItem" title="管理" id="1bw-En-nNX">
+                        <barButtonItem key="backBarButtonItem" title="返回" id="INx-Sh-29o"/>
+                    </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yDL-gm-6P2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1346" y="-256"/>
+            <point key="canvasLocation" x="1515" y="-25"/>
+        </scene>
+        <!--修改URL-->
+        <scene sceneID="um6-gV-zi6">
+            <objects>
+                <viewController id="ERP-en-e4w" customClass="UrlModiifyViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="pfU-Qa-fs8">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="URL_HEAD" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="lST-aR-kEo">
+                                <rect key="frame" x="16" y="90" width="89" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="现在的URL_HEAD：" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="rOe-Ip-b6O">
+                                <rect key="frame" x="16" y="280" width="157" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="URL_HEAD" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="5LJ-0z-70i">
+                                <rect key="frame" x="16" y="309" width="288" height="90"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="aIu-s4-bx6">
+                                <rect key="frame" x="16" y="181" width="73" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="提交">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="submit:" destination="ERP-en-e4w" eventType="touchUpInside" id="OVh-5f-O6F"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="rdn-fi-SQU">
+                                <rect key="frame" x="113" y="90" width="191" height="76"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.7910329235662128" green="1" blue="0.90500363484126845" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="修改URL" id="415-nl-9QS">
+                        <barButtonItem key="backBarButtonItem" title="返回" id="bnN-6e-NMK"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="currentUrlLabel" destination="5LJ-0z-70i" id="2yu-aK-dC5"/>
+                        <outlet property="urlTextView" destination="rdn-fi-SQU" id="rEN-sv-FEE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="M82-mf-f1f" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1950" y="-889"/>
+        </scene>
+        <!--修改管理员密码-->
+        <scene sceneID="xOf-YI-9ja">
+            <objects>
+                <viewController id="Mh3-wn-HpM" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="uW2-Nu-2jm">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="修改管理员密码" id="Cv3-Kk-i3d"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0Ek-id-NYH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1950" y="-339"/>
+        </scene>
+        <!--Table View Controller-->
+        <scene sceneID="Pka-LM-TsH">
+            <objects>
+                <tableViewController id="pFz-k5-ZP5" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="X95-Kv-rYx">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="8eK-S0-YMK">
+                                <rect key="frame" x="0.0" y="86" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="8eK-S0-YMK" id="pdb-6h-Pqd">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="pFz-k5-ZP5" id="l3f-p2-iKg"/>
+                            <outlet property="delegate" destination="pFz-k5-ZP5" id="CrZ-QP-7hk"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="K0O-T1-ZyR"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PNh-w0-6uj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1950" y="209"/>
         </scene>
         <!--管理员登陆-->
         <scene sceneID="pmM-gC-u42">
             <objects>
-                <viewController id="cg0-i2-xiY" sceneMemberID="viewController">
+                <viewController id="cg0-i2-xiY" customClass="LoginAdminViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="VOQ-IS-qCE">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -282,25 +405,32 @@
                                 <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation" secureTextEntry="YES"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="S3d-Vk-0cV">
-                                <rect key="frame" x="244" y="148" width="60" height="27"/>
+                                <rect key="frame" x="118" y="148" width="186" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="登录">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="QEx-hQ-olk" kind="push" id="vpv-46-gQU"/>
+                                    <action selector="submit:" destination="cg0-i2-xiY" eventType="touchUpInside" id="iAD-Sl-8MU"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="管理员登陆" id="b1r-8Z-M2I"/>
+                    <navigationItem key="navigationItem" title="管理员登陆" id="b1r-8Z-M2I">
+                        <barButtonItem key="backBarButtonItem" title="返回" id="ir1-TB-dhe"/>
+                    </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="pwdTextField" destination="lvB-79-v6a" id="nGC-d4-kTh"/>
+                        <outlet property="sumbitBtn" destination="S3d-Vk-0cV" id="7LJ-iK-nfA"/>
+                        <segue destination="QEx-hQ-olk" kind="push" identifier="login2Admin" id="vev-RL-Afe"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cMd-C4-val" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="978" y="-256"/>
+            <point key="canvasLocation" x="1080" y="-401"/>
         </scene>
         <!--设备-->
         <scene sceneID="qFH-8x-ZU2">
@@ -507,4 +637,7 @@
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
+    <inferredMetricsTieBreakers>
+        <segue reference="167-0p-KMH"/>
+    </inferredMetricsTieBreakers>
 </document>
