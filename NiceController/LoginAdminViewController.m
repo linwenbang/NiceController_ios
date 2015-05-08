@@ -109,7 +109,9 @@
             
             [self.sumbitBtn setTitle:@"退出登录" forState:UIControlStateNormal];
             
-            self.pwdTextField.enabled = NO;
+            //关闭页面 跳转
+            [self.navigationController popViewControllerAnimated:YES];
+            [self performSegueWithIdentifier:@"login2manager" sender:nil];
             
             break;
         case 201:
@@ -118,6 +120,7 @@
             [defaults setBool:false forKey:@"isLogin"];
             
             [defaults synchronize];
+            
             
             [self.sumbitBtn setTitle:@"登录" forState:UIControlStateNormal];
             self.pwdTextField.enabled = YES;

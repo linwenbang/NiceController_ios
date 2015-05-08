@@ -7,7 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
-
+#import "MJExtension.h"
+#import "UrlConstants.h"
 @interface HttpResultJson : NSObject
 
 @property (nonatomic,assign) int code;

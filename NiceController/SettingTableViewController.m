@@ -17,6 +17,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    
 }
 
 #pragma mark - Table view data source
@@ -41,15 +43,19 @@
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    if ([self isLogin]) {
-        ManagerTableViewController *managerVC = [[ManagerTableViewController alloc]init];
-        [self.navigationController pushViewController:managerVC animated:YES];
-    }else{
-         LoginAdminViewController *loginVC = [[LoginAdminViewController alloc]init];
-        [self.navigationController pushViewController:loginVC animated:YES];
+    switch (indexPath.section) {
+        case 0:
+            if ([self isLogin]) {
+                [self performSegueWithIdentifier:@"setting2manager" sender:nil];
+            }else{
+                [self performSegueWithIdentifier:@"setting2login" sender:nil];
+            }
+            break;
+            
+        default:
+            break;
     }
     
-   
 }
 
 

@@ -122,8 +122,8 @@
                     </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                     <connections>
-                        <segue destination="QEx-hQ-olk" kind="push" identifier="setting2admin" id="167-0p-KMH"/>
-                        <segue destination="cg0-i2-xiY" kind="push" identifier="setting2login" id="7Rw-Yj-z3E"/>
+                        <segue destination="cg0-i2-xiY" kind="push" identifier="setting2login" id="I8R-gy-2zz"/>
+                        <segue destination="QEx-hQ-olk" kind="push" identifier="setting2manager" id="qRS-Kz-8CW"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tCW-hu-SH6" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -262,6 +262,26 @@
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
+                            <tableViewSection id="HEj-hq-gXt">
+                                <cells>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="i2G-aC-cNL" style="IBUITableViewCellStyleDefault" id="81A-vb-PW4">
+                                        <rect key="frame" x="0.0" y="291" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="81A-vb-PW4" id="w6O-Za-K8J">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="退出登录" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="i2G-aC-cNL">
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
                         </sections>
                         <connections>
                             <outlet property="dataSource" destination="QEx-hQ-olk" id="I1A-58-bcR"/>
@@ -272,6 +292,9 @@
                         <barButtonItem key="backBarButtonItem" title="返回" id="INx-Sh-29o"/>
                     </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="logoutCell" destination="81A-vb-PW4" id="F7R-fE-BJc"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yDL-gm-6P2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -402,7 +425,7 @@
                                 <rect key="frame" x="118" y="102" width="186" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation" secureTextEntry="YES"/>
+                                <textInputTraits key="textInputTraits" keyboardType="alphabet" secureTextEntry="YES"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="S3d-Vk-0cV">
                                 <rect key="frame" x="118" y="148" width="186" height="35"/>
@@ -425,7 +448,7 @@
                     <connections>
                         <outlet property="pwdTextField" destination="lvB-79-v6a" id="nGC-d4-kTh"/>
                         <outlet property="sumbitBtn" destination="S3d-Vk-0cV" id="7LJ-iK-nfA"/>
-                        <segue destination="QEx-hQ-olk" kind="push" identifier="login2Admin" id="vev-RL-Afe"/>
+                        <segue destination="QEx-hQ-olk" kind="push" identifier="login2manager" id="sHP-DO-Z3B"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cMd-C4-val" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -638,6 +661,6 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="167-0p-KMH"/>
+        <segue reference="sHP-DO-Z3B"/>
     </inferredMetricsTieBreakers>
 </document>
