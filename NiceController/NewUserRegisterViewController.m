@@ -32,26 +32,6 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
-//- (void)showToastWithText:(NSString *)text{
-//    //只显示文字
-//    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
-//    hud.mode = MBProgressHUDModeText;
-//    hud.labelText = text;
-//    hud.margin = 10.f;
-//    hud.yOffset = 150.f;
-//    hud.removeFromSuperViewOnHide = YES;
-//    [hud hide:YES afterDelay:3];
-//}
-
 - (BOOL)checkParam{
     if([self.aliasTextField.text isEqualToString:@""]){
         
@@ -61,9 +41,6 @@
     }else{
         return true;
     }
-        
-    
-   
 }
 
 /**

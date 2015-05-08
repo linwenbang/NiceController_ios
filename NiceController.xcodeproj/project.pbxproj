@@ -13,7 +13,6 @@
 		E275F1AC1AFB07EB0041D53A /* AdId.m in Sources */ = {isa = PBXBuildFile; fileRef = E275F1AB1AFB07EB0041D53A /* AdId.m */; };
 		E275F1B31AFB0E960041D53A /* MBProgressHUD+MJ.m in Sources */ = {isa = PBXBuildFile; fileRef = E275F1B11AFB0E960041D53A /* MBProgressHUD+MJ.m */; };
 		E275F1B41AFB0E960041D53A /* MBProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = E275F1B21AFB0E960041D53A /* MBProgressHUD.bundle */; };
-		E275F1B81AFB13580041D53A /* UIViewController+KeyboardAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = E275F1B71AFB13580041D53A /* UIViewController+KeyboardAnimation.m */; };
 		E28D40C51AFB3E310028EAAE /* UrlModiifyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E28D40C41AFB3E310028EAAE /* UrlModiifyViewController.m */; };
 		E28D40CA1AFBA4050028EAAE /* ModifyAdminPwdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E28D40C91AFBA4050028EAAE /* ModifyAdminPwdViewController.m */; };
 		E28D40CE1AFBB7090028EAAE /* UrlConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = E28D40CD1AFBB7080028EAAE /* UrlConstants.m */; };
@@ -53,6 +52,8 @@
 		E2C47FB31AF73A7A003FE37C /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2C47FB21AF73A7A003FE37C /* Security.framework */; };
 		E2C47FB51AF73A8B003FE37C /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = E2C47FB41AF73A8B003FE37C /* libz.dylib */; };
 		E2C47FB81AF73BD1003FE37C /* PushConfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = E2C47FB71AF73BD1003FE37C /* PushConfig.plist */; };
+		E2CEE5B11AFCC0D600E6F224 /* ManagerUsersTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E2CEE5B01AFCC0D600E6F224 /* ManagerUsersTableViewController.m */; };
+		E2CEE5B41AFCC2AE00E6F224 /* ManagerUser.m in Sources */ = {isa = PBXBuildFile; fileRef = E2CEE5B31AFCC2AE00E6F224 /* ManagerUser.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,8 +79,6 @@
 		E275F1B01AFB0E960041D53A /* MBProgressHUD+MJ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+MJ.h"; sourceTree = "<group>"; };
 		E275F1B11AFB0E960041D53A /* MBProgressHUD+MJ.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+MJ.m"; sourceTree = "<group>"; };
 		E275F1B21AFB0E960041D53A /* MBProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = MBProgressHUD.bundle; sourceTree = "<group>"; };
-		E275F1B61AFB13580041D53A /* UIViewController+KeyboardAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+KeyboardAnimation.h"; sourceTree = "<group>"; };
-		E275F1B71AFB13580041D53A /* UIViewController+KeyboardAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+KeyboardAnimation.m"; sourceTree = "<group>"; };
 		E28D40C31AFB3E310028EAAE /* UrlModiifyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UrlModiifyViewController.h; sourceTree = "<group>"; };
 		E28D40C41AFB3E310028EAAE /* UrlModiifyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UrlModiifyViewController.m; sourceTree = "<group>"; };
 		E28D40C81AFBA4050028EAAE /* ModifyAdminPwdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModifyAdminPwdViewController.h; sourceTree = "<group>"; };
@@ -145,6 +144,10 @@
 		E2C47FB21AF73A7A003FE37C /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		E2C47FB41AF73A8B003FE37C /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		E2C47FB71AF73BD1003FE37C /* PushConfig.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = PushConfig.plist; sourceTree = "<group>"; };
+		E2CEE5AF1AFCC0D600E6F224 /* ManagerUsersTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ManagerUsersTableViewController.h; sourceTree = "<group>"; };
+		E2CEE5B01AFCC0D600E6F224 /* ManagerUsersTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ManagerUsersTableViewController.m; sourceTree = "<group>"; };
+		E2CEE5B21AFCC2AE00E6F224 /* ManagerUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ManagerUser.h; sourceTree = "<group>"; };
+		E2CEE5B31AFCC2AE00E6F224 /* ManagerUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ManagerUser.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -260,8 +263,6 @@
 				E275F1A21AFB05290041D53A /* HttpTool */,
 				E29DD4111AFA4583005D0D33 /* MJExtension */,
 				E275F19E1AFB04F40041D53A /* MBProgressHUD */,
-				E275F1B61AFB13580041D53A /* UIViewController+KeyboardAnimation.h */,
-				E275F1B71AFB13580041D53A /* UIViewController+KeyboardAnimation.m */,
 			);
 			name = Tool;
 			sourceTree = "<group>";
@@ -372,6 +373,7 @@
 		E29DD3DC1AF9C479005D0D33 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				E2CEE5AB1AFCC08400E6F224 /* GetAllRegisterUsers */,
 				E28D40D71AFBD3BC0028EAAE /* Setting */,
 				E28D40CF1AFBBCAE0028EAAE /* LoginAdmin */,
 				E28D40C71AFBA3C50028EAAE /* ModifyAdminPwd */,
@@ -545,6 +547,41 @@
 			path = NiceController.xcodeproj;
 			sourceTree = "<group>";
 		};
+		E2CEE5AB1AFCC08400E6F224 /* GetAllRegisterUsers */ = {
+			isa = PBXGroup;
+			children = (
+				E2CEE5AE1AFCC0B700E6F224 /* View */,
+				E2CEE5AD1AFCC0AE00E6F224 /* Model */,
+				E2CEE5AC1AFCC0A200E6F224 /* Controller */,
+			);
+			name = GetAllRegisterUsers;
+			sourceTree = "<group>";
+		};
+		E2CEE5AC1AFCC0A200E6F224 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E2CEE5AF1AFCC0D600E6F224 /* ManagerUsersTableViewController.h */,
+				E2CEE5B01AFCC0D600E6F224 /* ManagerUsersTableViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		E2CEE5AD1AFCC0AE00E6F224 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E2CEE5B21AFCC2AE00E6F224 /* ManagerUser.h */,
+				E2CEE5B31AFCC2AE00E6F224 /* ManagerUser.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		E2CEE5AE1AFCC0B700E6F224 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -700,7 +737,7 @@
 				E28D40C51AFB3E310028EAAE /* UrlModiifyViewController.m in Sources */,
 				E28D40CA1AFBA4050028EAAE /* ModifyAdminPwdViewController.m in Sources */,
 				E28D40DF1AFBD7690028EAAE /* ManagerTableViewController.m in Sources */,
-				E275F1B81AFB13580041D53A /* UIViewController+KeyboardAnimation.m in Sources */,
+				E2CEE5B41AFCC2AE00E6F224 /* ManagerUser.m in Sources */,
 				E29DD4241AFA4592005D0D33 /* MJType.m in Sources */,
 				E29DD4271AFA4592005D0D33 /* NSObject+MJProperty.m in Sources */,
 				E29DD4261AFA4592005D0D33 /* MJProperty.m in Sources */,
@@ -708,6 +745,7 @@
 				E29DD3E01AF9C4BD005D0D33 /* MainTabBarViewController.m in Sources */,
 				E28D40D31AFBBD390028EAAE /* LoginAdminViewController.m in Sources */,
 				E29DD4251AFA4592005D0D33 /* MJFoundation.m in Sources */,
+				E2CEE5B11AFCC0D600E6F224 /* ManagerUsersTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

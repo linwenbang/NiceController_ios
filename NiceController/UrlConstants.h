@@ -17,4 +17,7 @@
 + (NSString *)getUserRegisterUrl;
 + (NSString *)getLoginAmdinUrl;
 + (NSString *)getLogoutAmdinUrl;
++ (NSString *)getModifyAdminPwdUrl;
++ (NSString *)getALLUsersUrl;
+
 @end

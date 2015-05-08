@@ -39,5 +39,15 @@
     return [NSString stringWithFormat:@"%@api/v2.0/logout/%@",[UrlConstants getUrlHead],[AdId getAdId]];
 }
 
++ (NSString *)getModifyAdminPwdUrl{
+    return [NSString stringWithFormat:@"%@api/v2.0/changepassword/%@",[UrlConstants getUrlHead],[AdId getAdId]];
+}
+
+
++ (NSString *)getALLUsersUrl{
+    return [NSString stringWithFormat:@"%@api/v2.0/regist/%@",[UrlConstants getUrlHead],[AdId getAdId]];
+}
+
+
 
 @end

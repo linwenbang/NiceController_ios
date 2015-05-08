@@ -110,8 +110,12 @@
             [self.sumbitBtn setTitle:@"退出登录" forState:UIControlStateNormal];
             
             //关闭页面 跳转
+            
             [self.navigationController popViewControllerAnimated:YES];
+            
             [self performSegueWithIdentifier:@"login2manager" sender:nil];
+            
+            
             
             break;
         case 201:

@@ -60,19 +60,15 @@ typedef enum{
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self setNoAdmin];
     [self changeDeviceStatusWithDviceName:@"all" andAction:@"status" andView:nil];
+    
 }
-
-
-/*
- #pragma mark - Navigation
- 
- // In a storyboard-based application, you will often want to do a little preparation before navigation
- - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
- // Get the new view controller using [segue destinationViewController].
- // Pass the selected object to the new view controller.
- }
- */
+- (void)setNoAdmin{
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    [defaults setBool:false forKey:@"isLogin"];
+    [defaults synchronize];
+}
 
 - (void)changeDeviceStatusWithDviceName:(NSString *)deviceName andAction:(NSString *)action andView:(UIControl *)view{
     
@@ -88,8 +84,7 @@ typedef enum{
 
     
     NSString *urlString = [UrlConstants getDeviceUrl];
-    
-//    NSString *urlString = [NSString stringWithFormat:@"http://smarthome523000.sinaapp.com/api/v2.0/device/00664b1185a4"];
+
     NSLog(@"url = %@ ",urlString);
     NSURL *url = [NSURL URLWithString:urlString];
     

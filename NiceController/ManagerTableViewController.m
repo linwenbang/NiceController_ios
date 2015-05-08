@@ -82,17 +82,8 @@
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     
     switch (json.code) {
-            //        case 200:
-            //        case 201:
-            //            [MBProgressHUD showSuccess:@"退出登陆成功"];
-            //            //将登陆状态 保存到文件中
-            //            [defaults setBool:false forKey:@"isLogin"];
-            //
-            //            [defaults synchronize];
-            //
-            //            self.logoutCell.hidden = YES;
-            //            break;
-        default:
+        case 200:
+        case 201:
             [MBProgressHUD showSuccess:@"退出登陆成功"];
             //将登陆状态 保存到文件中
             [defaults setBool:false forKey:@"isLogin"];
@@ -100,7 +91,16 @@
             [defaults synchronize];
             
             self.logoutCell.hidden = YES;
-            //            [MBProgressHUD showError:json.summary];
+            break;
+        default:
+//            [MBProgressHUD showSuccess:@"退出登陆成功"];
+//            //将登陆状态 保存到文件中
+//            [defaults setBool:false forKey:@"isLogin"];
+//            
+//            [defaults synchronize];
+//            
+//            self.logoutCell.hidden = YES;
+            [MBProgressHUD showError:json.summary];
             break;
     }
     
