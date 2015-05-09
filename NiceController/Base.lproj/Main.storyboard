@@ -14,31 +14,21 @@
                     <tabBar key="tabBar" contentMode="scaleToFill" id="jEX-ye-l2S">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <color key="barTintColor" red="1" green="0.93420343377046977" blue="0.9637914818181692" alpha="1" colorSpace="calibratedRGB"/>
                     </tabBar>
                     <connections>
-                        <segue destination="NFQ-Mq-61Z" kind="relationship" relationship="viewControllers" id="BCi-st-Bvk"/>
-                        <segue destination="bw0-sF-A9q" kind="relationship" relationship="viewControllers" id="J8O-4l-e62"/>
+                        <segue destination="NFQ-Mq-61Z" kind="push" id="A8u-SU-bE7"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9Kj-7E-5XK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-429" y="-105"/>
+            <point key="canvasLocation" x="-360" y="-139"/>
         </scene>
         <!--设置-->
         <scene sceneID="lPs-hH-4s8">
             <objects>
                 <navigationController id="bw0-sF-A9q" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="设置" id="ZKJ-q2-MIp" propertyAccessControl="none">
-                        <attributedString key="userComments">
-                            <fragment content="I">
-                                <attributes>
-                                    <font key="NSFont" metaFont="smallSystem"/>
-                                    <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
-                                </attributes>
-                            </fragment>
-                        </attributedString>
-                    </tabBarItem>
+                    <tabBarItem key="tabBarItem" title="设置" badgeValue="10" id="h64-06-x0V"/>
                     <navigationItem key="navigationItem" id="arO-Ku-aFW"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="pSN-G8-JX2">
@@ -65,7 +55,7 @@
                             <tableViewSection id="NMA-Sg-oBu">
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="m3P-QY-Sm2" imageView="3ui-P1-2KQ" rowHeight="40" style="IBUITableViewCellStyleDefault" id="HnQ-7L-epU">
-                                        <rect key="frame" x="0.0" y="35" width="320" height="40"/>
+                                        <rect key="frame" x="0.0" y="99" width="320" height="40"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="HnQ-7L-epU" id="Qz2-Z9-qQ8">
                                             <rect key="frame" x="0.0" y="0.0" width="287" height="39"/>
@@ -88,7 +78,7 @@
                             <tableViewSection id="t6x-6C-enU">
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="aHs-0W-oFE" imageView="Aka-DC-kgN" rowHeight="40" style="IBUITableViewCellStyleDefault" id="p8S-yX-m4Q">
-                                        <rect key="frame" x="0.0" y="95" width="320" height="40"/>
+                                        <rect key="frame" x="0.0" y="159" width="320" height="40"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="p8S-yX-m4Q" id="SVR-Ic-4dv">
                                             <rect key="frame" x="0.0" y="0.0" width="287" height="39"/>
@@ -196,7 +186,7 @@
                             <tableViewSection id="gk5-zE-J7a">
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="4tf-8z-HQZ" style="IBUITableViewCellStyleDefault" id="Smq-dT-cPr">
-                                        <rect key="frame" x="0.0" y="99" width="320" height="44"/>
+                                        <rect key="frame" x="0.0" y="35" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Smq-dT-cPr" id="uQf-Xl-v7a">
                                             <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
@@ -219,7 +209,7 @@
                             <tableViewSection id="8Xn-v0-sI2">
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="aaJ-qI-awr" style="IBUITableViewCellStyleDefault" id="ZiR-rH-FtW">
-                                        <rect key="frame" x="0.0" y="163" width="320" height="44"/>
+                                        <rect key="frame" x="0.0" y="99" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ZiR-rH-FtW" id="qIP-N1-TAP">
                                             <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
@@ -242,7 +232,7 @@
                             <tableViewSection id="Wuo-he-tbK">
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="8SI-uY-cwa" style="IBUITableViewCellStyleDefault" id="14d-8v-BCE">
-                                        <rect key="frame" x="0.0" y="227" width="320" height="44"/>
+                                        <rect key="frame" x="0.0" y="163" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="14d-8v-BCE" id="5hT-cm-ibj">
                                             <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
@@ -265,7 +255,7 @@
                             <tableViewSection id="HEj-hq-gXt">
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="i2G-aC-cNL" style="IBUITableViewCellStyleDefault" id="81A-vb-PW4">
-                                        <rect key="frame" x="0.0" y="291" width="320" height="44"/>
+                                        <rect key="frame" x="0.0" y="227" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="81A-vb-PW4" id="w6O-Za-K8J">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
@@ -430,7 +420,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="user" rowHeight="85" id="8eK-S0-YMK">
-                                <rect key="frame" x="0.0" y="86" width="320" height="85"/>
+                                <rect key="frame" x="0.0" y="22" width="320" height="85"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="8eK-S0-YMK" id="pdb-6h-Pqd">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="84"/>
@@ -528,11 +518,11 @@
             </objects>
             <point key="canvasLocation" x="1080" y="-401"/>
         </scene>
-        <!--设备-->
+        <!--Navigation Controller-->
         <scene sceneID="qFH-8x-ZU2">
             <objects>
                 <navigationController id="NFQ-Mq-61Z" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="设备" id="R1B-11-kWI"/>
+                    <tabBarItem key="tabBarItem" enabled="NO" id="R1B-11-kWI"/>
                     <navigationItem key="navigationItem" id="LUc-Nk-F7R"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="haH-DE-ygK">
@@ -558,6 +548,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="home_top_bg" id="LGk-G0-qwv">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="172"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.12" minValue="0.0" maxValue="1" id="a7O-fm-IeT">
                                 <rect key="frame" x="86" y="192" width="220" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -624,7 +618,7 @@
                                 <state key="highlighted" image="humidity_selected"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="The-jh-CxN" userLabel="temp">
-                                <rect key="frame" x="9" y="268" width="72" height="72"/>
+                                <rect key="frame" x="19" y="268" width="45" height="72"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="temp_defalut">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -678,7 +672,7 @@
                                     <action selector="updateAllDevice:" destination="UsU-Ac-BKl" eventType="touchUpInside" id="14R-Of-y83"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="cgf-Ni-7G9" userLabel="led">
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="cgf-Ni-7G9" userLabel="led">
                                 <rect key="frame" x="9" y="85" width="64" height="64"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="led_defualt">
@@ -715,18 +709,19 @@
     </scenes>
     <resources>
         <image name="admin" width="512" height="512"/>
-        <image name="beep_alert" width="256" height="256"/>
-        <image name="beep_default" width="256" height="256"/>
-        <image name="fan_default" width="256" height="256"/>
-        <image name="fan_on" width="256" height="256"/>
-        <image name="humidity_defualt" width="256" height="256"/>
-        <image name="humidity_selected" width="256" height="256"/>
-        <image name="led_defualt" width="256" height="256"/>
-        <image name="led_light" width="256" height="256"/>
-        <image name="sercue_default" width="256" height="256"/>
-        <image name="sercue_locked" width="256" height="256"/>
-        <image name="temp_alert" width="256" height="256"/>
-        <image name="temp_defalut" width="256" height="256"/>
+        <image name="beep_alert" width="120" height="142"/>
+        <image name="beep_default" width="120" height="142"/>
+        <image name="fan_default" width="120" height="150"/>
+        <image name="fan_on" width="120" height="150"/>
+        <image name="home_top_bg" width="640" height="323"/>
+        <image name="humidity_defualt" width="145" height="145"/>
+        <image name="humidity_selected" width="145" height="145"/>
+        <image name="led_defualt" width="114" height="151"/>
+        <image name="led_light" width="114" height="151"/>
+        <image name="sercue_default" width="119" height="142"/>
+        <image name="sercue_locked" width="119" height="142"/>
+        <image name="temp_alert" width="90" height="190"/>
+        <image name="temp_defalut" width="90" height="190"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
